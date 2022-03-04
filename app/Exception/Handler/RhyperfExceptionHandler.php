@@ -25,10 +25,10 @@ class RhyperfExceptionHandler extends ExceptionHandler
         $this->stopPropagation();
         // TODO: Implement handle() method.
         return $response->withHeader("content-type", "application/json")
-            ->withStatus($throwable->getHttpCode())
+            ->withStatus($throwable->httpCode)
             ->withBody(new SwooleStream(json_encode([
-                "errcode" => $throwable->getErrorCode(),
-                "message" => $throwable->getMsg(),
+                "errcode" => $throwable->errorCode,
+                "message" => $throwable->msg,
             ])));
     }
 

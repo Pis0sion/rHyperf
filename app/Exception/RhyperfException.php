@@ -2,47 +2,24 @@
 
 namespace App\Exception;
 
+use Throwable;
+
 /**
  * \App\Exception\RhyperfException
  */
 class RhyperfException extends \Exception
 {
-    /**
-     * @var int
-     */
-    protected int $httpCode = 400;
 
     /**
-     * @var string
+     * @param string $msg
+     * @param int $httpCode
+     * @param string $errorCode
      */
-    protected string $msg = "Invalid Parameters";
-
-    /**
-     * @var string
-     */
-    protected string $errorCode = "10001";
-
-    /**
-     * @return int
-     */
-    public function getHttpCode(): int
+    public function __construct(
+        public string $msg = "Invalid Parameters",
+        public int    $httpCode = 400,
+        public string $errorCode = "10001")
     {
-        return $this->httpCode;
     }
 
-    /**
-     * @return string
-     */
-    public function getMsg(): string
-    {
-        return $this->msg;
-    }
-
-    /**
-     * @return string
-     */
-    public function getErrorCode(): string
-    {
-        return $this->errorCode;
-    }
 }

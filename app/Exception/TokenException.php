@@ -11,15 +11,15 @@ class TokenException extends RhyperfException
     /**
      * @var int
      */
-    protected int $httpCode = 401;
+    public int $httpCode = 401;
 
     /**
      * @var string
      */
-    protected string $msg = 'Token has expired or invalid Token';
+    public string $msg = 'Token has expired or invalid Token';
 
     /**
      * @var string
      */
-    protected string $errorCode = "10002";
+    public string $errorCode = "10002";
 }

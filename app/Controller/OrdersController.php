@@ -2,16 +2,20 @@
 
 namespace App\Controller;
 
-use App\Exception\ForbiddenException;
+use App\Annotations\Validate;
 use App\Exception\ParametersException;
-use App\Exception\TokenException;
+use App\Validate\IDValidate;
+use Hyperf\Di\Annotation\AnnotationCollector;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\RequestMapping;
 
 #[Controller]
+#[Validate(value: "1231")]
 class OrdersController
 {
+
     #[RequestMapping(path: "/foo/exception", methods: "GET")]
+    #[Validate(value: IDValidate::class)]
     public function foo()
     {
         throw new ParametersException();
