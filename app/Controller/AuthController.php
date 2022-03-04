@@ -11,6 +11,7 @@ use Hyperf\HttpServer\Annotation\Middleware;
 use Hyperf\HttpServer\Annotation\Middlewares;
 use Hyperf\HttpServer\Annotation\RequestMapping;
 use Hyperf\HttpServer\Contract\RequestInterface;
+
 use App\Middleware\Auth\RefreshTokenMiddleware;
 use HyperfExt\Jwt\Contracts\JwtFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -31,6 +32,7 @@ class AuthController
      */
     public function login(RequestInterface $request):ResponseInterface
     {
+
         $credentials = $request->inputs(['email','password']);
         if (!$token = auth('api')->attempt($credentials)) {
             return $this->setHttpCode()->fail('Unauthorized');

@@ -2,7 +2,6 @@
 
 namespace App\Exception;
 
-use Throwable;
 
 /**
  * \App\Exception\RhyperfException
@@ -21,5 +20,6 @@ class RhyperfException extends \Exception
         public string $errorCode = "10001")
     {
     }
+
 
 }
