@@ -2,12 +2,14 @@
 
 namespace App\Exception;
 
-use Exception;
+use App\Constants\ErrorCode;
+use Hyperf\Server\Exception\ServerException;
+use Throwable;
 
 /**
- * \App\Exception\RhyperfException
+ * 定义异常类
  */
-class RhyperfException extends Exception
+class FooException extends ServerException
 {
     /**
      * @var int
@@ -29,7 +31,6 @@ class RhyperfException extends Exception
      */
     public function getHttpCode(): int
     {
-
         return $this->httpCode;
     }
 
@@ -48,7 +49,6 @@ class RhyperfException extends Exception
     {
         return $this->errorCode;
     }
-
 
 
 }

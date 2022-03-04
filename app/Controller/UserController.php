@@ -17,6 +17,7 @@ class UserController
     {
         //$id = $request->input('id');
         //直接使用
-        return $this->userService->getInfoById($id);
+        return '我是ID：'.$id;
+        //return $this->userService->getInfoById($id);
     }
 }
