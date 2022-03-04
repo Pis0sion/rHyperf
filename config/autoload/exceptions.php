@@ -15,10 +15,10 @@ use App\Exception\Handler\RhyperfExceptionHandler;
 return [
     'handler' => [
         'http' => [
+            \Hyperf\Validation\ValidationExceptionHandler::class,
             App\Exception\Handler\FooExceptionHandler::class,
             RhyperfExceptionHandler::class,
             App\Exception\Handler\AppExceptionHandler::class,
-
         ],
     ],
 ];

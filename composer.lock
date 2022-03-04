@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b1e4ad3b9c2d6438d8e4323d1b5bc3e",
+    "content-hash": "b8482fcf20009823b6b0558f455df46e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2583,13 +2583,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/hyperf/validation/zipball/6b7b22707a178018d55f15ce0a6ff5f31a54ec2b",
                 "reference": "6b7b22707a178018d55f15ce0a6ff5f31a54ec2b",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "shasum": ""
             },
             "require": {
                 "egulias/email-validator": "^3.0",
@@ -8319,7 +8313,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.3"
+        "php": ">=8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"

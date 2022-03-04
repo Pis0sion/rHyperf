@@ -14,6 +14,7 @@ use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Annotation\AutoController;
 use App\Service\UserService;
 use Hyperf\Di\Annotation\Inject;
+use App\Request\FooRequest;
 
 class IndexController extends AbstractController
 {
@@ -46,6 +47,10 @@ class IndexController extends AbstractController
         $data = ['username'=>'lijinjuan','age'=>18,'sex'=>'girl'];
         return $this->userService->addCustomer($data);
     }
-
-
+    public function form(FooRequest $request)
+    {
+        $this->request->input('user','password');
+        $validated = $request->validated();
+        return $validated;
+    }
 }
