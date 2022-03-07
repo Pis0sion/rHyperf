@@ -29,8 +29,7 @@
         "hyperf/memory": "~2.2.0",
         "hyperf/process": "~2.2.0",
         "hyperf/redis": "^2.2",
-        "hyperf/validation": "^2.2",
-        "jzb/library": "dev-master"
+        "hyperf/validation": "^2.2"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -50,8 +49,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "App\\Validate\\": ""
+            "App\\": "app/"
         },
         "files": [
             "app/Functions.php"
