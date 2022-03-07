@@ -6,6 +6,8 @@ namespace App\Controller;
 
 use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Annotation\AutoController;
+use Ljinj\Components\Test;
+
 
 /**
  * @AutoController()
@@ -18,5 +20,11 @@ class TestController
         // 从请求中获得 id 参数
         $id = $request->input('id', 1);
         return (string)$id;
+    }
+
+    public function getinfo()
+    {
+
+        return Test::getinfo();
     }
 }
